@@ -4,15 +4,27 @@
 }
 
 .colour-border{
-  border: 3px solid green;
+  max-width: fit-content;
+  margin-inline: auto;
+  border: 6px solid rgb(107, 3, 34);
   padding: 10px;
+}
+
+.main {
+  align-content: center;
 }
 
 .header{
   padding: 10px;
 }
 
+.header h1{
+  font-weight: bold;
+  font-size: 14pt;
+  color: mediumorchid
+}
+
 body{
   padding: 10px;
-  background-color: antiquewhite;
+  background-color: rgb(187, 240, 237);
 }
