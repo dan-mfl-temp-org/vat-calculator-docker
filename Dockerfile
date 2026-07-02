@@ -1,4 +1,4 @@
-FROM node:24-alpine
+FROM node:24-alpine AS stage1
 
 # change into a folder called /app
 WORKDIR /app
@@ -15,4 +15,11 @@ COPY . .
 # package up the react project in the /app directory
 RUN npm run build
 
-CMD ["npm", "run", "start"]
+FROM nginx:1.28-alpine
+COPY --from=stage1 /app/build /usr/share/nginx/html
+
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
