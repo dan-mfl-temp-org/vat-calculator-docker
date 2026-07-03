@@ -1,0 +1,2 @@
+image: danstuken/vat:<+pipeline.sequenceId>
+replicas: 1
