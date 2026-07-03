@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className='header main'>
-      <h1>VAT Calculator from Dan Soft</h1>  
+      <h1>VAT Calculator from Dan Soft (v2)</h1>  
       <div className='colour-border'>
         <VatRateField customstyle="field" vatRateChanged={handleVatRateChanged} value={vatRate} updatePrices={updatePrices} />
         <PriceEntryField customstyle="field" label="Price excl VAT: " priceChanged={handleNetPriceChange} price={netPrice === 0.0 ? "" : netPrice} />

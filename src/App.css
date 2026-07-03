@@ -24,12 +24,19 @@
   color: mediumorchid
 }
 
+html, body {
+  height: 100%;
+}
+
 body{
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   background-color: rgb(187, 240, 237);
 }
 
 footer {
+  flex-shrink: 0;
   background-color: black;
   color: lightgray;
   font-size: 7pt;
